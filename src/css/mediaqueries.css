@@ -60,3 +60,21 @@
         font-size: 1.8em;
     }
 }
+
+@media (min-width: 972px) and (max-height: 660px){
+    .logo{
+        height: 300px;
+    }
+
+    .nome{
+        justify-content: center;
+    }
+}
+
+@media (min-width: 972px) and (max-height: 525px){
+    .nome{
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+}
+
