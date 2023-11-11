@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/css/cardapio.css">
 </head>
 <body>
-    <h1>aqui vai os card com os bagulho</h1>
+    <header id="cabecalho">
+        <div>
+            <img src="assets/images/logo2.png" alt="">
+        </div>
+        <div class="container" onclick="clickMenu()">
+            <input type="checkbox" id="checkbox-menu">
+            <label for="checkbox-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <div class="cabecalho-menu"  id="menu">
+            <ul class="cabecalho-menu_lista">
+                <li><a href="index.html">Voltar</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <article class="card">
+            <div class="flip">
+                <section class="front-card front-card_caipirinhaLimao">
+                    <h1 class="front-card_nome">Caipirinha de limão</h1>
+                </section>
+
+                <section class="back-card">
+                    <div class="bc-container">
+                        <p class="back-card_details">Vokda / Limão / Açúcar</p>
+                        <p class="ml">400 <span class="unidade">ml</span></p>
+                    </div>
+                    <p class="back-card_price">14<span class="moeda">R$</span></p>
+                </section>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="flip">
+                <section class="front-card front-card_mojito">
+                    <h1 class="front-card_nome">Mojito</h1>
+                </section>
+
+                <section class="back-card">
+                    <div class="bc-container">
+                        <p class="back-card_details">Rum / Limão / Açúcar / Hortelã</p>
+                        <p class="ml">400 <span class="unidade">ml</span></p>
+                    </div>
+                    <p class="back-card_price">12<span class="moeda">R$</span></p>
+                </section>
+            </div>
+        </article>
+
+    </main>
+    
+    <section class="feedback">
+        <div class="feedback-container">
+            <p>Achou algum erro no nosso site?</p>
+            <p>Tem alguma sujestão?</p>
+            <p><a class="help" href="https://wa.me/5553984118836?text=Vim pelo Bandolivery" >Clique aqui</a> e nos deixe sabendo!</p>
+        </div>
+    </section>
+
+    <footer class="rodape">
+            <p>&copy; 2023. <a class="marca" href="#cabecalho">Los Bandoleros</a>. Todos os direitos reservados. Desenvolvido por Gustavo Silva Vieira</p>
+    </footer>
+
+    <script src="src/js/cardapio.js"></script>
 </body>
 </html>

@@ -1,0 +1,256 @@
+:root{
+    --bgcor1: #2E8EFE;
+    --bgcor2: #0077FF;
+    --cor1: #FFA735;
+    --cor2: #FE7235;
+    --cor3: #FFE1C8;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+}
+
+main{
+    background-color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#cabecalho{
+    background-color: var(--cor1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#cabecalho div img{
+    position: relative;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    z-index: 1;
+}
+
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+}
+
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #f34004;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1){
+    top: 0;
+}
+
+label span:nth-child(2){
+    top: 8px;
+}
+
+label span:nth-child(3){
+    top: 16px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.cabecalho-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    transition-duration: 1s;
+}
+
+.cabecalho-menu_lista{
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--cor1);
+    padding: 150px 30px 30px 30px;
+    letter-spacing: .1em;
+    font-variant: small-caps;
+}
+
+.card{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    perspective: 1000px;
+    border: 2px solid var(--bgcor2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card .flip{
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.flip{
+    width: 100%;
+    height: 100%;
+}
+
+.card:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.front-card, .back-card{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.front-card_caipirinhaLimao{
+    background-image: url(../../assets/images/cardapio/caipirinhaLimao.jpg);
+}
+
+.front-card_mojito{
+    background-image: url(../../assets/images/cardapio/mojito.jpg)
+}
+
+.front-card_nome{
+    background-color: rgba(0, 0, 0, 0.60);
+    color: var(--cor1);
+    width: 100%;
+    padding: 5px;
+}
+
+.back-card{
+    background-image: linear-gradient(45deg,var(--bgcor1), var(--bgcor2));
+    color:  var(--cor1);
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.bc-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+.back-card_details{
+    height: 40%;
+    font-size: 1.1em;
+    text-align: center;
+
+}
+
+.ml{
+    font-size: 2em;
+}
+
+.unidade{
+    font-size: .8em;
+}
+
+.back-card_price{
+    height: 40%;
+    font-size: 4em;
+}
+
+.moeda{
+    font-size: .2em;
+}
+
+.feedback{
+    background-color: var(--bgcor2);
+}
+
+.feedback-container{
+    color: var(--cor1);
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.help{
+    background-color: var(--cor1);
+    color: var(--bgcor2);
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.help:hover{
+    background-color: var(--bgcor2);
+    color: var(--cor1);
+}
+
+.rodape{
+    padding: 10px;
+    text-align: center;
+}
+
+.marca:hover{
+    color: var(--cor1);
+}
